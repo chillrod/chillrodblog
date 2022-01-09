@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
-
-import { styled } from "../../../config/stitches";
-
-import { Button, useColorMode } from "@chakra-ui/react";
+import { IconButton, useColorMode } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-
-const Toggle = styled(Button, {
-  justifySelf: "end",
-});
 
 export const ThemeToggle = () => {
   const [audio, setAudio] = useState<HTMLAudioElement>();
@@ -29,8 +22,11 @@ export const ThemeToggle = () => {
   }, []);
 
   return (
-    <Toggle size="sm" onClick={() => toggleColor()}>
-      {colorIcons[colorMode]}
-    </Toggle>
+    <IconButton
+      justifySelf="end"
+      aria-label="change color mode"
+      onClick={() => toggleColor()}
+      icon={colorIcons[colorMode]}
+    />
   );
 };

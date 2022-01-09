@@ -1,20 +1,13 @@
-import { styled } from "../../../config/stitches";
+import { Grid } from "@chakra-ui/react";
 
 import { ThemeToggle } from "../theme-toggle";
 import { Chill } from "../chill";
 
-const Navigator = styled("nav", {
-  display: "grid",
-  alignItems: "center",
-  gridTemplateColumns: "repeat(2, 1fr)",
-  padding: ".5em",
-});
-
 export const Nav = () => {
   return (
-    <Navigator>
+    <Grid templateColumns="1fr 1fr">
       <Chill />
       <ThemeToggle />
-    </Navigator>
+    </Grid>
   );
 };
