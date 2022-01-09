@@ -1,4 +1,4 @@
-import { styled } from "@stitches/react";
+import { styled } from "../../../config/stitches";
 
 import { ThemeToggle } from "../theme-toggle";
 import { Chill } from "../chill";

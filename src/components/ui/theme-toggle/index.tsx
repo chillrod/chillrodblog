@@ -1,9 +1,9 @@
-import { styled } from "@stitches/react";
+import { useEffect, useState } from "react";
+
+import { styled } from "../../../config/stitches";
 
 import { Button, useColorMode } from "@chakra-ui/react";
-
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { useEffect, useState } from "react";
 
 const Toggle = styled(Button, {
   justifySelf: "end",
@@ -28,5 +28,9 @@ export const ThemeToggle = () => {
     setAudio(new Audio("./fx/click.wav"));
   }, []);
 
-  return <Toggle size="sm" onClick={() => toggleColor()}>{colorIcons[colorMode]}</Toggle>;
+  return (
+    <Toggle size="sm" onClick={() => toggleColor()}>
+      {colorIcons[colorMode]}
+    </Toggle>
+  );
 };
