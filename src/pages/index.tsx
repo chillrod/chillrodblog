@@ -6,6 +6,7 @@ import { Container } from "@chakra-ui/react";
 
 import { Nav } from "../components/ui/nav";
 import { Main } from "../components/ui/main";
+import { Blog } from "../components/ui/blog/blog";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Container maxW="container.md">
         <Nav />
         <Main />
+        <Blog />
       </Container>
     </>
   );
