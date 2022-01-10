@@ -9,7 +9,7 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 
-export const Chill = ({ noMenu = false }: { noMenu: boolean }) => {
+export const Chill = ({ noMenu = false }: { noMenu?: boolean }) => {
   return (
     <Box>
       <Heading as="h1" size="xl" paddingTop={0}>
