@@ -1,14 +1,51 @@
-import { Badge, Box, Heading } from "@chakra-ui/react";
+import { ArrowUpDownIcon, AtSignIcon, HamburgerIcon } from "@chakra-ui/icons";
+import {
+  Badge,
+  Box,
+  Heading,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
 
-export const Chill = () => {
+export const Chill = ({ noMenu = false }: { noMenu: boolean }) => {
   return (
     <Box>
-      <Heading as="h1" size="md" paddingTop={0}>
+      <Heading as="h1" size="xl" paddingTop={0}>
         chillrod
       </Heading>
-      <Badge>
-        .dev
-      </Badge>
+      {noMenu && (
+        <Badge colorScheme="purple" fontSize="md">
+          .dev
+        </Badge>
+      )}
+
+      {!noMenu && (
+        <Menu>
+          <MenuButton
+            _focus={{
+              border: "1px",
+              borderColor: "purple.500",
+              borderRadius: 5,
+            }}
+          >
+            <Badge colorScheme="purple" cursor="pointer" fontSize="xl">
+              .dev
+            </Badge>
+          </MenuButton>
+          <MenuList>
+            <MenuItem>
+              <AtSignIcon />
+              blog
+            </MenuItem>
+            <MenuItem>
+              <ArrowUpDownIcon />
+              playground
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      )}
     </Box>
   );
 };

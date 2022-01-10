@@ -23,10 +23,10 @@ export const ThemeToggle = () => {
 
   return (
     <IconButton
-      justifySelf="end"
-      aria-label="change color mode"
-      onClick={() => toggleColor()}
+      aria-label="Toggle dark mode"
       icon={colorIcons[colorMode]}
+      justifySelf="end"
+      onClick={() => toggleColor()}
     />
   );
 };

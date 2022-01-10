@@ -7,6 +7,7 @@ import { Container } from "@chakra-ui/react";
 import { Nav } from "../components/ui/nav";
 import { Main } from "../components/ui/main";
 import { Blog } from "../components/ui/blog/blog";
+import { Footer } from "../components/ui/footer";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <Nav />
         <Main />
         <Blog />
+        <Footer />
       </Container>
     </>
   );
