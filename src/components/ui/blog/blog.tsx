@@ -28,8 +28,13 @@ export const Blog = () => {
     <>
       <Grid gap={12} paddingTop={20}>
         <Heading as="h2">Featured posts</Heading>
-        {posts.map((post) => (
-          <Post text={post.text} title={post.title} date={post.date} />
+        {posts.map((post, index) => (
+          <Post
+            text={post.text}
+            key={index}
+            title={post.title}
+            date={post.date}
+          />
         ))}
         <Link
           display="flex"
